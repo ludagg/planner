@@ -9,7 +9,7 @@ jobs:
       - name: Installing Flutter
         uses: britannio/action-install-flutter@v0.4
         with:
-          version: 'stable'
+          version: '2.10.5'
       - run: flutter pub get
       - run: flutter build ios --no-codesign
       - run: git diff --exit-code
@@ -24,7 +24,7 @@ jobs:
       - name: Installing Flutter
         uses: britannio/action-install-flutter@v0.4
         with:
-          version: 'stable'
+          version: '2.10.5'
       - run: flutter pub get
       - run: flutter build appbundle --release --flavor prod 
       - run: git diff --exit-code
