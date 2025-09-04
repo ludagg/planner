@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "316210140325",
+    "project_id": "luvvix-78a47",
+    "storage_bucket": "luvvix-78a47.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:316210140325:android:8b8604ec6e532bc82a694c",
+        "android_client_info": {
+          "package_name": "com.manager.onbuch"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "316210140325-19uv92qorbe11om77fdf9ng5gbm9goqd.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCOBNpnbNQXLEugm1Z-49K2Qf4Mj5MNEjA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "316210140325-19uv92qorbe11om77fdf9ng5gbm9goqd.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
