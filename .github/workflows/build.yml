@@ -3,30 +3,46 @@ on: [push, pull_request]
 
 jobs:
   build_ios:
+    name: Build iOS App
     runs-on: macos-latest
     steps:
       - uses: actions/checkout@v2
-      - name: Install Flutter 1.22.6
+
+      # Installer Flutter 2.10.5
+      - name: Install Flutter
         uses: subosito/flutter-action@v2
         with:
-          flutter-version: '1.22.6'
-      - name: Install dependencies from lock file
-        run: flutter pub get --offline || flutter pub get
+          flutter-version: '2.10.5'
+
+      # Installer les dépendances
+      - name: Get dependencies
+        run: flutter pub get
+
+      # Build iOS (sans code signing)
       - name: Build iOS
         run: flutter build ios --no-codesign
 
   build_android:
+    name: Build Android App
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
+
+      # Installer Java pour Android
       - uses: actions/setup-java@v1
         with:
           java-version: "12.x"
-      - name: Install Flutter 1.22.6
+
+      # Installer Flutter 2.10.5
+      - name: Install Flutter
         uses: subosito/flutter-action@v2
         with:
-          flutter-version: '1.22.6'
-      - name: Install dependencies from lock file
-        run: flutter pub get --offline || flutter pub get
-      - name: Build Android
+          flutter-version: '2.10.5'
+
+      # Installer les dépendances
+      - name: Get dependencies
+        run: flutter pub get
+
+      # Build Android APK release
+      - name: Build Android APK
         run: flutter build apk --release
